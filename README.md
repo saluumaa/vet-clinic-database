@@ -1,4 +1,4 @@
-### BOOKSTORE
+### VET-CLINIC-DATABASE
 
 # 📗 Table of Contents
 
@@ -23,7 +23,7 @@
 
 ## About the Project
 
-> This project is built with React, it helps organise and save your favorite books.
+> This project is built with PostegreSQL, it helps build database and let you add, update and delete data in the database.
 
 ## Built With
 
