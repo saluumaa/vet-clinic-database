@@ -9,8 +9,7 @@ SELECT * FROM animals WHERE neutered = true;
 SELECT * FROM animals WHERE name NOT IN ('Gabumon');
 SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
 
-/* Alter the database schema to add a new column. */
-ALTER TABLE animals ADD species varchar(255);
+
 
 BEGIN;
 UPDATE animals SET species = 'unspecified';
