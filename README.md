@@ -4,48 +4,128 @@
 
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
 - [📝 License](#license)
 
-## About the Project
+<!-- PROJECT DESCRIPTION -->
 
-> This project is built with PostegreSQL, it helps build database and let you add, update and delete data in the database.
+# 📖 [VET CLINIC] <a name="about-project"></a>
 
-## Built With
+**[Vet_Clinic]** is aproject is built with PostegreSQL, it helps build database and let you add, update and delete data in the database.
 
-- PostegreSQL
-- Gitflow
+## 🛠 Built With <a name="built-with"></a>
+- Postgres
 
-### Key Features
 
-- Build table
+### Tech Stack <a name="tech-stack"></a>
+- SQL
 
-## Getting Started
+> SQL stands for Structured Query Language which is used to access and manipulates databases.
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">N/A</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://expressjs.com/">N/A</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
+
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+
+- **[Animals table that consists of details of each animals ]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+In order to run this project you need:
+
+Install Postgres SQL
+> [Postgress SQL download](https://www.postgresql.org/download/)
+
+
+### Setup
 
 Clone this repository to your desired folder:
 
 ```sh
-  cd your-prefer-folder
   git clone https://github.com/saluumaa/vet-clinic-database
+  cd vet-clinic 
 ```
 
-### Run this command to run server
+### Usage
 
-> npm start
+To run the project, execute the following command:
 
-### Run this command build server
 
-> npm run build
+```sh
+  psql -u postgres
+ ```
+
+ > Enter your password and continue with sql commands.
+
+### Run tests
+
+To run tests, run the following command: N/A
+
+<!--
+Example command:
+
+```sh
+  bin/rails test test/models/article_test.rb
+```
+--->
+
+### Deployment
+
+You can deploy this project using:
+
+<!--
+Example:
+
+```sh
+
+```
+ -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
 
