@@ -42,14 +42,6 @@ Clone this repository to your desired folder:
   git clone https://github.com/saluumaa/vet-clinic-database
 ```
 
-### Run this command to run server
-
-> npm start
-
-### Run this command build server
-
-> npm run build
-
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Salma Ibrahim**
