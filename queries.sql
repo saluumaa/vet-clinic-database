@@ -85,4 +85,78 @@ GROUP BY owners.full_name
 ORDER BY num_animals DESC;
 
 
+--RELATIONSHIP QUERIES
+
+/* question ONE */
+SELECT a.name AS last_seen
+FROM animals AS a
+JOIN visits as V ON V.animals_id = a.id
+JOIN vets as vt ON vt.id = v.vet_id
+WHERE vt.name = 'William Tatcher'
+ORDER BY v.visit_date DESC
+LIMIT 1;
+
+/* question TWO */
+SELECT COUNT(DISTINCT v.animals_id) AS count_animal
+FROM visits AS v
+JOIN vets AS vt ON vt.id = v.vet_id
+WHERE vt.name = 'Vet Stephanie Mendez';
+
+
+/* question THREE */
+SELECT v.name AS vet_name, s.name AS specialty
+FROM vets AS v
+LEFT JOIN specializations AS sp ON sp.vet_id = v.id
+LEFT JOIN species AS s ON s.id = sp.species_id;
+
+/* question FOUR */
+SELECT a.name AS a_name
+FROM animals AS a
+JOIN visits AS v ON v.animal_id = a.id
+JOIN vets AS vt ON vt.id = v.vet_id
+WHERE vt.name = 'Vet Stephanie Mendez'
+AND v.visit_date BETWEEN '2020-04-01' AND '2020-08-30';
+
+/* question FIVE */
+SELECT a.name AS a_name, COUNT(*) AS v_count
+FROM animals AS a
+JOIN visits AS v ON v.animals_id = a.id
+GROUP BY a.name
+ORDER BY v_count DESC
+LIMIT 1;
+
+/* question SIX */
+SELECT a.name AS a_name, MIN(v.visit_date) AS first_visit
+FROM animals AS a
+JOIN visits AS v ON v.animals_id = a.id
+JOIN vets AS vt ON vt.id = v.vet_id
+WHERE vt.name = 'Vet Maisy Smith'
+GROUP BY a.name;
+
+/* question SEVEN */
+SELECT a.name AS a_name, v.visit_date, vt.name AS vet_name
+FROM animals AS a
+JOIN visits AS v ON v.animals_id = a.id
+JOIN vets AS vt ON vt.id = v.vet_id
+ORDER BY v.visit_date DESC
+LIMIT 1;
+
+/* question EIGHT */
+SELECT COUNT(*) AS non_specialist_visits
+FROM visits AS v
+JOIN animals AS a ON a.id = v.animals_id
+JOIN vets AS vt ON vt.id = v.vet_id
+LEFT JOIN specialization AS sp ON sp.vet_id = vt.id AND sp.species_id = a.species_id
+WHERE sp.vet_id IS NULL;
+
+/* question NINE */
+SELECT s.name AS vet_speciality
+FROM animals AS a
+JOIN visits AS v ON v.animals_id = a.id
+JOIN species AS s ON s.id = a.species_id
+JOIN vets AS vt ON vt.id = v.vet_id
+WHERE vt.name = 'Vet Maisy Smith'
+GROUP BY s.name
+ORDER BY COUNT(*) DESC
+LIMIT 1;
 
