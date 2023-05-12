@@ -87,19 +87,6 @@ Clone this repository to your desired folder:
   cd vet-clinic 
 ```
 
-### Usage
-
-To run the project, execute the following command:
-
-
-```sh
-  psql -u postgres
- ```
-
- > Enter your password and continue with sql commands.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Salma Ibrahim**
